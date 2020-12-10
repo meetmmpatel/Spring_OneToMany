@@ -1,9 +1,12 @@
 package com.one.to.many.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "tbl_transactions")
+@JsonIgnoreProperties(value = {"users"})
 public class Transactions extends AuditModel {
   
   @Id
